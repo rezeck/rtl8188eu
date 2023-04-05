@@ -28,6 +28,7 @@ CONFIG_RTW_ADAPTIVITY_MODE = normal
 CONFIG_BR_EXT = y
 CONFIG_RTW_NAPI = y
 CONFIG_RTW_GRO = y
+CONFIG_WIFI_MONITOR = y
 ########################## Debug ###########################
 CONFIG_RTW_DEBUG = y
 # please refer to "How_to_set_driver_debug_log_level.doc" to set the available level.
@@ -344,7 +345,7 @@ ARCH ?= $(SUBARCH)
 CROSS_COMPILE ?=
 KVER  ?= $(if $(KERNELRELEASE),$(KERNELRELEASE),$(shell uname -r))
 KSRC ?= $(if $(KERNEL_SRC),$(KERNEL_SRC),/lib/modules/$(KVER)/build)
-MODDESTDIR := /lib/modules/$(KVER)/kernel/drivers/staging/r8188eu/
+MODDESTDIR := /lib/modules/$(KVER)/kernel/drivers/staging/rtl8188eu/
 INSTALL_PREFIX :=
 
 ifeq ($(CONFIG_MULTIDRV), y)
